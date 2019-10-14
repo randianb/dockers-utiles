@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+
+  nginx:
+    build:
+      context: ./
+      dockerfile: ./build/nginx.dockerfile
+      args:
+        - NGINX_NOMBRE_UPSTREAM=${NGINX_NOMBRE_UPSTREAM}
+        - PYTHON_PUERTO=${PYTHON_PUERTO}
+        - NGINX_PORT=${NGINX_PORT}
+
+    restart: always
+    env_file: .env
+
+    volumes:
+      - ./volumes/nginx/config:/etc/nginx/conf.d/
+      - ./volumes/nginx/logs:/var/log/nginx/log
+    
+    ports:
+      - ${NGINX_PORT}:${NGINX_PORT}
+      - 8080:8080
+
+
+  python:
+    build:
+      context: ./
+      dockerfile: ./build/python.dockerfile
+      args:
+        - NOMBRE_CARPETA_PROYECTO=${NOMBRE_CARPETA_PROYECTO}
+        - PYTHON_PUERTO=${PYTHON_PUERTO}
+
+    env_file: .env
+    restart: always
+
+    volumes:
+      - ./volumes/python/${NOMBRE_CARPETA_PROYECTO}:/usr/src -w
+
+    ports:
+      - ${PYTHON_PUERTO}:${PYTHON_PUERTO}
