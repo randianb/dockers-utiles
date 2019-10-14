@@ -14,3 +14,9 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 CMD python -m flask run --port ${PYTHON_PUERTO} --host 0.0.0.0
+# CMD gunicorn \
+#     -b 0.0.0.0:${PYTHON_PUERTO} \
+#     --reload \
+#     --workers=5 \
+#     --worker-connections 1001 \
+#     app:server 

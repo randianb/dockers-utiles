@@ -20,7 +20,6 @@ services:
     
     ports:
       - ${NGINX_PORT}:${NGINX_PORT}
-      - 8080:8080
 
 
   python:
@@ -35,7 +34,7 @@ services:
     restart: always
 
     volumes:
-      - ./volumes/python/${NOMBRE_CARPETA_PROYECTO}:/usr/src -w
+      - ./volumes/python/${NOMBRE_CARPETA_PROYECTO}:/usr/src/
 
     ports:
       - ${PYTHON_PUERTO}:${PYTHON_PUERTO}
