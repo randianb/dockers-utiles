@@ -1,0 +1,3 @@
+<jboss-web>
+	<context-root>redis-template</context-root>
+</jboss-web>

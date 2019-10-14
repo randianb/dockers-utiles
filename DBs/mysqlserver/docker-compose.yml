@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+
+  my-sql-server:
+
+    image: mysql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    
+    environment:
+      - MYSQL_USER=leafnoise
+      - MYSQL_PASSWORD=leafnoise
+      - MYSQL_ROOT_PASSWORD=leafnoise
+      - MYSQL_DATABASE=database
+
+    volumes:
+      - ./volumes/data:/var/lib/mysql
+      - ./volumes/sql/:/var/sql/
+    
+    ports:
+      - "3306:3306"
