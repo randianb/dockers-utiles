@@ -6,6 +6,13 @@ Compose de ejemplo de balanceo de carga
 ![alt text](img/gunicorn.jpg)
 ![alt text](img/python.png)
 
+## PRUEBAS
+
+* correr con `docker-compose up`
+* una vez levantado ir a ***localhost***
+* recargar la pagina con F5 varias veces, el json de respuesta deberia 
+cambiar porque nginx esta balanceando la carga entre los 2 proyectos de python
+
 ## CONFIGURACION
 
 * En el archivo ***.env*** se encuentran las variables de entorno para docker

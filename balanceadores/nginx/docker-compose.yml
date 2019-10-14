@@ -7,9 +7,10 @@ services:
       context: ./
       dockerfile: ./build/nginx.dockerfile
       args:
-        - NGINX_NOMBRE_UPSTREAM=${NGINX_NOMBRE_UPSTREAM}
-        - PYTHON_PUERTO=${PYTHON_PUERTO}
+        - PYTHON1_PUERTO=${PYTHON1_PUERTO}
+        - PYTHON2_PUERTO=${PYTHON2_PUERTO}
         - NGINX_PORT=${NGINX_PORT}
+        - NGINX_NOMBRE_UPSTREAM=${NGINX_NOMBRE_UPSTREAM}
 
     restart: always
     env_file: .env
@@ -22,19 +23,37 @@ services:
       - ${NGINX_PORT}:${NGINX_PORT}
 
 
-  python:
+  python1:
     build:
       context: ./
-      dockerfile: ./build/python.dockerfile
+      dockerfile: ./build/python1.dockerfile
       args:
-        - NOMBRE_CARPETA_PROYECTO=${NOMBRE_CARPETA_PROYECTO}
-        - PYTHON_PUERTO=${PYTHON_PUERTO}
+        - PYTHON1_NOMBRE_CARPETA_PROYECTO=${PYTHON1_NOMBRE_CARPETA_PROYECTO}
+        - PYTHON1_PUERTO=${PYTHON1_PUERTO}
 
     env_file: .env
     restart: always
 
     volumes:
-      - ./volumes/python/${NOMBRE_CARPETA_PROYECTO}:/usr/src/
+      - ./volumes/python1/${PYTHON1_NOMBRE_CARPETA_PROYECTO}:/usr/src/
 
     ports:
-      - ${PYTHON_PUERTO}:${PYTHON_PUERTO}
+      - ${PYTHON1_PUERTO}:${PYTHON1_PUERTO}
+
+
+  python2:
+    build:
+      context: ./
+      dockerfile: ./build/python2.dockerfile
+      args:
+        - PYTHON2_NOMBRE_CARPETA_PROYECTO=${PYTHON2_NOMBRE_CARPETA_PROYECTO}
+        - PYTHON2_PUERTO=${PYTHON2_PUERTO}
+
+    env_file: .env
+    restart: always
+
+    volumes:
+      - ./volumes/python2/${PYTHON2_NOMBRE_CARPETA_PROYECTO}:/usr/src/
+
+    ports:
+      - ${PYTHON2_PUERTO}:${PYTHON2_PUERTO}

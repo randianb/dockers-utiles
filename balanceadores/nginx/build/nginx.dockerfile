@@ -1,9 +1,9 @@
 FROM nginx
 
-ARG NGINX_NOMBRE_UPSTREAM
-ARG PYTHON_PUERTO
-ARG NGINX_HOST
+ARG PYTHON1_PUERTO
+ARG PYTHON2_PUERTO
 ARG NGINX_PORT
+ARG NGINX_NOMBRE_UPSTREAM
 
 RUN useradd foo && chown -R foo /etc/nginx/
 COPY ./volumes/nginx/config/proxy.conf /etc/nginx/conf.d/proxy.conf
