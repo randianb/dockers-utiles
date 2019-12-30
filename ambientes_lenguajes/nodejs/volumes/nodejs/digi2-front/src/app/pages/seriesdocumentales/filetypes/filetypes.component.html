@@ -1,0 +1,64 @@
+<div class="page-container">
+    <div class="filters-container">
+        <form [formGroup]="searchForm" fxLayout fxLayoutAlign="start center" fxLayoutGap="1rem">
+            <mat-form-field fxFlex=25>
+                <input matInput placeholder="Buscar..." formControlName="search" />
+            </mat-form-field>
+            <mat-form-field fxFlex=25>
+                <mat-select placeholder="Estado" formControlName="state" (change)="refreshList()">
+                    <mat-option *ngFor="let state of stateOptions" [value]="state.value">{{ state.viewValue }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <div class="tree">
+        <mat-list>
+            <mat-list-item *ngFor="let item of list | searchfilter: 'nombreExtension' : searchForm.value.search" (click)="editItem(item)">
+                <h3 matLine> {{ item.nombreExtension }} </h3>
+            </mat-list-item>
+        </mat-list>
+    </div>
+
+    <div *ngIf="showEditor !== false" [class.first]="showEditor" [class.second]="!showEditor">
+        <div class="home-container">
+            <button *ngIf="editForm.value.activo" mat-fab (click)="editItemSave()" class="floating-button">
+                <i class="material-icons">save</i>
+            </button>
+
+            <div class="home-titulo">
+                <h1>Propiedades</h1>
+                <i class="material-icons" (click)="editItemCancel()">clear</i>
+            </div>
+            <div class="home-contenido">
+                <div class="home-documento">
+                    <form [formGroup]="editForm">
+                        <mat-form-field>
+                            <input matInput placeholder="Extensión" formControlName="nombreExtension" />
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Descripción" formControlName="descripcionExtension" />
+                        </mat-form-field>
+                    </form>
+                </div>
+
+                <div *ngIf="editForm.value.idExtension != null" class="delete-button-container">
+                    <div *ngIf="editForm.value.activo" class="delete-button" (click)="deleteItem()">
+                        <i class="material-icons">power_settings_new</i>
+                        <p>Desactivar</p>
+                    </div>
+                    <div *ngIf="!editForm.value.activo" class="activate-button" (click)="undeleteItem()">
+                        <i class="material-icons">power_settings_new</i>
+                        <p>Activar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-button">
+        <button mat-fab class="floating-button" (click)="newItem()">
+            <i class="material-icons">add</i>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+
+  imb-mq:
+    image: "ibmcom/mq"
+
+    environment:
+      - LICENSE=accept
+      - MQ_ADMIN_PASSWORD=leafnoise
+      - MQ_APP_PASSWORD=leafnoise
+      - MQ_QMGR_NAME=manager_sidu
+      - MQ_ENABLE_METRICS=true
+    
+    ports:
+      - "1414:1414"
+      - "9443:9443"
+      - "9157:9157"      
+
+    volumes:
+      - ./volumes/mqm/:/mnt/mqm/

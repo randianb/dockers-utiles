@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+
+  db2:
+    env_file: .env
+    # restart: always
+    privileged: true
+    
+    image: ibmcom/db2
+
+    volumes:
+      - ./volumes/db2:/database
+    
+    ports:
+      - "${DB2_SERVER_PUERTO_EXPUESTO}:50000"
+
+    # command: db2start

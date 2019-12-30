@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  
+  mongodb:
+    image: mongo
+    restart: always
+    env_file: .env
+
+    volumes:
+      - ./volumes/mongo:/data/db
+
+    ports:
+      - "${MONGO_PUERTO_EXTERNO}:${MONGO_PUERTO_INTERNO}"

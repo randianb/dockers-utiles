@@ -1,0 +1,432 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./style/main";
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 12pt;
+}
+
+.mat-step-header {
+    cursor: pointer;
+    &:focus,
+    &:hover {
+        background-color: transparent !important;
+    }
+}
+
+.mat-tab-body {
+    padding: 2rem;
+}
+.mat-tab-body-content {
+    overflow: visible !important;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+//MODAL
+.modal-header {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 0.1rem solid $primary;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    h2 {
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+        color: $primary;
+    }
+}
+.mat-dialog-container {
+    position: relative;
+    float: left;
+}
+
+.mat-dialog-actions {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: right;
+    margin: 2rem 0;
+    margin-bottom: 0 !important;
+}
+
+@media screen and(max-width:959px) {
+    .mat-vertical-content-container {
+      margin-left: 0 !important;
+    }
+    .mat-stepper-vertical-line::before {
+        border-left-color: transparent !important;
+    }
+    .mat-vertical-stepper-header {
+        padding: 24px 0 !important;
+    }
+    .mat-vertical-content {
+        padding: 0 0 24px 0 !important;
+    }
+}
+
+//snackbar
+.error-snackbar {
+    background-color: #a32626 !important;
+}
+.success-snackbar {
+    background-color: #447f61 !important;
+}
+.warning-snackbar {
+    background-color: #F7A021 !important;
+}
+
+.mat-simple-snackbar-action {
+    color: white !important;
+}
+
+
+//VARIOS
+.align-right{
+    text-align: right;
+}
+.align-center{
+    text-align: center;
+}
+
+//USER INFO
+.user-info {
+    max-width: none !important;
+    width: 30vw !important;
+    min-width: 300px !important;
+    margin-left: -8px !important;
+    margin-top: 24px !important;
+    background-color: #eee;
+    position: fixed;
+    right: 2rem;
+    min-height: 50vh;
+    max-height: 60vh !important;
+    padding: 2rem !important;
+    box-sizing: border-box;
+
+    .user-title {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        background-color: $accent;
+        border-radius: 2rem;
+        text-align: center;
+        padding: 0.3rem;
+        margin-bottom: 1rem;
+        p {
+            margin: 0;
+        }
+    }
+
+    .user-item {
+        width: 100%;
+        border-bottom: $border-thin;
+        padding: 1rem 0 1rem 2rem;
+        color: $dark-grey;
+        font-size: 0.9rem;
+        font-weight: 100;
+        position: relative;
+        float: left;
+        box-sizing: border-box;
+    }
+}
+
+//Sidemenu
+.tree {
+    margin-top: 1rem;
+
+    .mat-list-item {
+        width: 100%;
+        position: relative;
+        float: left;
+        clear: both;
+    }
+}
+
+.second {
+    .home-container {
+        right: -55% !important;
+        transition: right 1s;
+    }
+}
+
+.first {
+    .home-container {
+        right: 0 !important;
+        transition: right 1s;
+    }
+}
+
+.home-container {
+    width: 50%;
+    position: fixed;
+    right: 0;
+    background: white;
+    padding: 3rem;
+    top: 4rem;
+    box-shadow: -5px 0px 9px rgba(0, 0, 0, 0.1);
+    height: 94vh;
+    box-sizing: border-box;
+    margin-top: 0;
+    color: $dark-grey;
+    font-size: 0.9rem;
+    z-index: 1;
+    animation-duration: 1s;
+    animation-name: home;
+
+    .home-titulo {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0;
+        clear: both;
+        .material-icons {
+            position: relative;
+            float: right;
+            margin-top: 1.7rem;
+            cursor: pointer;
+            color: $primary
+        }
+        h1 {
+            position: relative;
+            float: left;
+            font-weight: 300;
+            color: $primary;
+        }
+    }
+    .home-contenido {
+        position: relative;
+        float: left;
+        width: 100%;
+        overflow: scroll;
+        overflow-x: hidden;
+        max-height: 75vh;
+    }
+
+    .floating-button{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1;
+    }
+}
+
+@keyframes home {
+    from {
+        right: -30rem
+    }
+    to {
+        right: 0;
+    }
+}
+
+//List
+.value-container {
+    padding: 1rem 2rem 1rem 0;
+    margin: 0;
+    border-bottom: 1px solid lightgray;
+    width: 90%;
+    span {
+        font-weight: 300;
+        color: darkslategrey;
+        letter-spacing: 1px;
+    }
+    &.selected {
+        font-weight: bold;
+        span {
+            font-weight: bold;
+            color: $primary;
+        }
+
+        .node-expanded:before {
+            color: $primary !important;
+        }
+        .node-collapsed:before {
+            color: $primary !important;
+        }
+    }
+}
+
+tree-internal ul {
+    padding: 0 0 3px 25px !important;
+}
+
+tree-internal {
+    .tree {
+        .node-value {
+            font-family: "Roboto";
+            cursor: pointer;
+            color: darkslategrey;
+
+            &:after {
+                display: none !important;
+            }
+        }
+    }
+}
+
+tree-internal .tree .folding.node-leaf {
+    display: none;
+}
+tree-internal .tree .folding.node-expanded:before {
+    content: '\25BE' !important;
+}
+
+tree-internal .tree .folding.node-collapsed:before {
+    content: '\25B8' !important;
+}
+
+.item-label {
+    font-size: 0.8rem;
+    color: grey;
+    text-transform: none;
+    width: 100%;
+    position: relative;
+    float: left;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.margin-top {
+    margin-top: 1rem;
+}
+
+
+//List style
+.mat-list-item-content {
+    border-bottom: 0.01rem solid grey;
+}
+.mat-list-text {
+    cursor: pointer;
+    h3 {
+        font-size: 0.9rem !important;
+        color: #4d4d4d;
+    }
+    p {
+        font-size: 0.8rem !important;
+        padding: 0.5rem !important;
+        color: grey;
+    }
+
+}
+
+//add button
+.add-button {
+    right: 1rem;
+    bottom: 1rem;
+    position: fixed;
+}
+
+
+//delete button
+.delete-button-container {
+    width: 100%;
+    position: relative;
+    float: left;
+    border-top: 0.01rem solid grey;
+    margin-top: 2rem;
+    .delete-button {
+        cursor: pointer;
+        .material-icons {
+            color: crimson;
+            position: relative;
+            float: left;
+            margin-right: 1rem;
+            margin-top: 0.7rem;
+        }
+
+        p {
+            text-transform: uppercase;
+            color: crimson;
+            font-weight: 500;
+            position: relative;
+            float: left;
+
+        }
+    }
+    .activate-button {
+        cursor: pointer;
+        .material-icons {
+            color: $accent;
+            position: relative;
+            float: left;
+            margin-right: 1rem;
+            margin-top: 0.7rem;
+        }
+
+        p {
+            text-transform: uppercase;
+            color: $accent;
+            font-weight: 500;
+            position: relative;
+            float: left;
+
+        }
+    }
+}
+
+
+//page containers
+.page-container {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 7rem;
+}
+
+.filters-container {
+    position: relative;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+//AUTOCOMPLETE
+.ng2-tag-input__text-input {
+    padding: 0 !important;
+    margin-bottom: -1rem !important;
+    background: transparent !important;
+}
+.ng2-tag-input {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+.validate.mat-form-field.ng-valid .mat-form-field-label,
+.validate.mat-form-field.mat-focused.ng-valid .mat-form-field-label {
+    color: #447f61 !important;
+}
+.validate.mat-form-field.ng-valid .mat-form-field-ripple,
+.validate.mat-form-field.ng-valid .mat-form-field-underline,
+.validate.mat-form-field.mat-focused.ng-valid .mat-form-field-ripple,
+.validate.mat-form-field.mat-focused.ng-valid .mat-form-field-underline {
+    background-color: #447f61 !important;
+}
+
+.validate.mat-form-field.ng-invalid .mat-form-field-label,
+.validate.mat-form-field.mat-focused.ng-invalid .mat-form-field-label {
+    color: #f44336 !important;
+}
+.validate.mat-form-field.ng-invalid .mat-form-field-ripple,
+.validate.mat-form-field.ng-invalid .mat-form-field-underline,
+.validate.mat-form-field.mat-focused.ng-invalid .mat-form-field-ripple,
+.validate.mat-form-field.mat-focused.ng-invalid .mat-form-field-underline {
+    background-color: #f44336 !important;
+}

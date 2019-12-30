@@ -1,0 +1,30 @@
+version: '3.3'
+
+
+services:
+
+    python_docker:
+        image: "python:latest"
+        build: ./python
+        volumes:
+            - ./python/:/volume/
+        ports:
+            - "5000:5000"
+
+
+    haproxy:
+        image: "haproxy:latest"
+        build: ./haproxy
+        volumes:
+            - ./haproxy:/volume/
+        ports:
+            - "11000:5000"
+
+
+    # vegeta:
+    #     image: "vegeta009/builder:latest"
+    #     build: ./vegeta
+    #     volumes:
+    #         - ./vegeta:/volume/
+
+    

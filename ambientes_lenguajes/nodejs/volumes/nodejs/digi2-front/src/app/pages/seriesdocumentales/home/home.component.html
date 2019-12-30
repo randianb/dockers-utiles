@@ -1,0 +1,108 @@
+<div class="page-container">
+    <div class="filters-container">
+        <form [formGroup]="searchForm" fxLayout fxLayoutAlign="start center" fxLayoutGap="1rem">
+            <mat-form-field fxFlex=25>
+                <input matInput placeholder="Buscar..." formControlName="search" />
+            </mat-form-field>
+            <mat-form-field fxFlex=25>
+                <mat-select placeholder="Estado" formControlName="state" (change)="refreshList()">
+                    <mat-option *ngFor="let state of stateOptions" [value]="state.value">{{ state.viewValue }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <div class="tree">
+        <mat-list>
+            <mat-list-item *ngFor="let item of list | searchfilter: 'nombreSerieDocumental' : searchForm.value.search" (click)="editItem(item)">
+                <h3 matLine> {{ item.nombreSerieDocumental }} </h3>
+                <p matLine> {{ item.descripcionSerieDocumental }} </p>
+            </mat-list-item>
+        </mat-list>
+    </div>
+
+    <div *ngIf="showEditor !== false" [class.first]="showEditor" [class.second]="!showEditor">
+        <div class="home-container">
+            <button *ngIf="editForm.value.activo" mat-fab (click)="editItemSave()" class="floating-button">
+                <i class="material-icons">save</i>
+            </button>
+
+            <div class="home-titulo">
+                <h1>Propiedades</h1>
+                <i class="material-icons" (click)="editItemCancel()">clear</i>
+            </div>
+            <div class="home-contenido">
+                <div class="home-documento">
+                    <form [formGroup]="editForm">
+                        <mat-form-field>
+                            <input matInput placeholder="Nombre" formControlName="nombreSerieDocumental" />
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Descripción" formControlName="descripcionSerieDocumental" />
+                        </mat-form-field>
+                        <!-- <mat-form-field class="margin-top">
+                            <mat-select formControlName="tipoDocumento" placeholder="Tipo de Documento">
+                                <mat-option *ngFor="let documentType of documentTypesList" [value]="documentType.idTipoDocumento">
+                                    {{ documentType.nombreTipoDocumento }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field> -->
+                        <mat-form-field>
+                            <mat-select formControlName="aplicacionesPermitidas" multiple placeholder="Aplicaciones Permitidas">
+                                <mat-option *ngFor="let application of applicationsList" [value]="application.idAplicacion">
+                                    {{ application.nombreAplicacion }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-select formControlName="estados" multiple placeholder="Estados">
+                                <mat-option *ngFor="let state of statesList" [value]="state.idEstado">{{ state.nombreEstado }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-select formControlName="tiposArchivo" multiple placeholder="Tipos de Archivo">
+                                <mat-option *ngFor="let fileType of fileTypesList" [value]="fileType.idExtension">
+                                    {{ fileType.nombreExtension }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <p class="item-label">Requiere Firma Digital</p>
+                        <p>
+                            <mat-slide-toggle formControlName="requiereFirmaDigital">
+                                <span *ngIf="editForm.value.requiereFirmaDigital">Si</span>
+                                <span *ngIf="!editForm.value.requiereFirmaDigital">No</span>
+                            </mat-slide-toggle>
+                        </p>
+                        <mat-form-field>
+                            <mat-select formControlName="mesesGuarda" placeholder="Tiempo Guardado">
+                                <mat-option *ngFor="let time of timeOptions" [value]="time.value">{{ time.viewValue }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <p class="item-label">Requiere encriptación</p>
+                        <mat-slide-toggle formControlName="confidencial">
+                            <span *ngIf="editForm.value.confidencial">Si</span>
+                            <span *ngIf="!editForm.value.confidencial">No</span>
+                        </mat-slide-toggle>
+                    </form>
+                </div>
+
+                <div *ngIf="editForm.value.idSerieDocumental != null" class="delete-button-container">
+                    <div *ngIf="editForm.value.activo" class="delete-button" (click)="deleteItem()">
+                        <i class="material-icons">power_settings_new</i>
+                        <p>Desactivar</p>
+                    </div>
+                    <div *ngIf="!editForm.value.activo" class="activate-button" (click)="undeleteItem()">
+                        <i class="material-icons">power_settings_new</i>
+                        <p>Activar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-button">
+        <button mat-fab class="floating-button" (click)="newItem()">
+            <i class="material-icons">add</i>
+        </button>
+    </div>
+</div>
