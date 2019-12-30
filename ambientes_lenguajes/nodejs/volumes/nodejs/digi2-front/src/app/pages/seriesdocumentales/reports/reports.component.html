@@ -1,0 +1,180 @@
+<div class="page-container">
+    <div class="buttons-container" fxLayout fxLayoutAlign="start center" fxLayoutGap="1rem">
+        <button [class.button-selected]="mostrarReporte1 == true" mat-raised-button (click)="selectReporte(1)" fxFlex>
+            documentos por mes
+        </button>
+        <button [class.button-selected]="mostrarReporte2 == true" mat-raised-button (click)="selectReporte(2)" fxFlex>
+            documentos por año
+        </button>
+        <button [class.button-selected]="mostrarReporte3 == true" mat-raised-button (click)="selectReporte(3)" fxFlex>
+            documentos por mes y año
+        </button>
+    </div>
+    <form class="filters-container" [formGroup]="filtrosForm" fxLayout fxLayoutAlign="start center" fxLayoutGap="1rem">
+
+        <div *ngIf="mostrarFiltroAnio" fxFlex=33>
+            <mat-form-field>
+                <input matInput placeholder="Año" formControlName="anio" type="number">
+            </mat-form-field>
+        </div>
+        <div *ngIf="mostrarFiltroMes" fxFlex=33>
+            <mat-select placeholder="Mes" formControlName="mes">
+                <mat-option *ngFor="let mes of meses" [value]="mes.value">
+                    {{ mes.display }}
+                </mat-option>
+            </mat-select>
+        </div>
+        <div *ngIf="mostrarBoton" fxFlex=33>
+            <button mat-raised-button color=primary (click)="filtrar()">
+                Filtrar
+            </button>
+        </div>
+    </form>
+    <div *ngIf="mostrarReporte1">
+        <mat-table #table [dataSource]="dataSource1">
+            <!-- Position Column -->
+            <ng-container matColumnDef="codigoSistema">
+                <mat-header-cell *matHeaderCellDef> Codigo sistema </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.codigoSistema}} </mat-cell>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="enero">
+                <mat-header-cell *matHeaderCellDef> Enero </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.enero}} </mat-cell>
+            </ng-container>
+            <!-- Weight Column -->
+            <ng-container matColumnDef="febrero">
+                <mat-header-cell *matHeaderCellDef> Febrero </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.febrero}} </mat-cell>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="marzo">
+                <mat-header-cell *matHeaderCellDef> Marzo </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.marzo}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="abril">
+                <mat-header-cell *matHeaderCellDef> Abril </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.abril}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="mayo">
+                <mat-header-cell *matHeaderCellDef> Mayo </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.mayo}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="junio">
+                <mat-header-cell *matHeaderCellDef> Junio </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.junio}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="julio">
+                <mat-header-cell *matHeaderCellDef> Julio </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.julio}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="agosto">
+                <mat-header-cell *matHeaderCellDef> Agosto </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.agosto}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="septiembre">
+                <mat-header-cell *matHeaderCellDef> Septiembre </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.septiembre}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="octubre">
+                <mat-header-cell *matHeaderCellDef> Octubre </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.octubre}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="noviembre">
+                <mat-header-cell *matHeaderCellDef> Noviembre </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.noviembre}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="diciembre">
+                <mat-header-cell *matHeaderCellDef> Diciembre </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.diciembre}} </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns1"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns1;"></mat-row>
+        </mat-table>
+        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
+        </mat-paginator>
+    </div>
+    <div *ngIf="mostrarReporte2">
+        <mat-table #table [dataSource]="dataSource2">
+            <ng-container matColumnDef="codigoSistema">
+                <mat-header-cell *matHeaderCellDef> Codigo sistema </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.codigoSistema}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="ano">
+                <mat-header-cell *matHeaderCellDef> Año </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.ano}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="cantidad">
+                <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.cantidad}} </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns2"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns2;"></mat-row>
+        </mat-table>
+        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
+        </mat-paginator>
+    </div>
+    <div *ngIf="mostrarReporte3">
+        <mat-table #table [dataSource]="dataSource3">
+            <ng-container matColumnDef="codigoSistema">
+                <mat-header-cell *matHeaderCellDef> Codigo sistema </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.codigoSistema}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="estado">
+                <mat-header-cell *matHeaderCellDef> Estado </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.estado}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="cantidad">
+                <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.cantidad}} </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns3"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns3;"></mat-row>
+        </mat-table>
+        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
+        </mat-paginator>
+    </div>
+    <!-- <div id="exportable1">
+    <table width="100%">
+      <thead>
+        <tr>
+          <th>Codigo sistema</th>
+          <th>Enero</th>
+          <th>Febrero</th>
+          <th>Marzo</th>
+          <th>Abril</th>
+          <th>Mayo</th>
+          <th>Junio</th>
+          <th>Julio</th>
+          <th>Agosto</th>
+          <th>Septiembre</th>
+          <th>Octubre</th>
+          <th>Noviembre</th>
+          <th>Diciembre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="item in {true: dataSource1.data, false:[]}[dataSource1.data.length > 0]">
+          <td>{{item.codigoSistema}}</td>
+          <td>{{item.enero}}</td>
+          <td>{{item.febrero}}</td>
+          <td>{{item.marzo}}</td>
+          <td>{{item.abril}}</td>
+          <td>{{item.mayo}}</td>
+          <td>{{item.junio}}</td>
+          <td>{{item.julio}}</td>
+          <td>{{item.agosto}}</td>
+          <td>{{item.septiembre}}</td>
+          <td>{{item.octubre}}</td>
+          <td>{{item.noviembre}}</td>
+          <td>{{item.diciembre}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+    <div class="floating-btn">
+        <button mat-fab color="primary" (click)="downloadExcel()">
+            <i class="material-icons">file_download</i>
+        </button>
+    </div>
+</div>

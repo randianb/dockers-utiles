@@ -1,0 +1,29 @@
+@import "~style/main";
+
+.action-bar {
+    width: 100%;
+    position: fixed;
+    left: 0%;
+    top: 64px;
+    padding: 1rem 0 0;
+    border-bottom: 0.1rem solid #ccc;
+    background-color: white;
+
+    .action-bar-button {
+        color: $primary;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 0  1.5rem 1.1rem;
+
+        &:hover{
+            color: $accent;
+        }
+    }
+
+    .action-bar-button.menu-active {
+        color: #0695d6;
+        border-bottom: 0.2rem solid #0695d6;
+        font-weight: bold;
+    }
+}

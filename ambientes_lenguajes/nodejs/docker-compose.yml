@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  nodejs:
+    build:
+      context: ./
+      dockerfile: build/nodejs.Dockerfile
+      args:
+        - NODEJS_PROYECTO=${NODEJS_PROYECTO}
+        - NODEJS_PUERTO=${NODEJS_PUERTO}
+
+    env_file: .env
+
+    # volumes:
+    #   - ./volumes/nodejs/${NODEJS_PROYECTO}:/home/node/app
+
+    ports:
+      - ${NODEJS_PUERTO}:${NODEJS_PUERTO}

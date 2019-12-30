@@ -1,0 +1,86 @@
+<div class="sidenav-container" fxLayout="column" [class.collapsed]="!isCollapsed">
+    <div color="primary" class="sidenav-toolbar">
+        <div class="sidenav-logo-container">
+            <a routerLink="/seriesdocumentales/home">
+                <img src="/assets/img/logo-anses.svg" class="sidenav-logo">
+            </a>
+        </div>
+        <button (click)="toggleMenu()" class="menu-icon">
+            <i class="material-icons">menu</i>
+        </button>
+        <h1 class="sidenav-title">Series Documentales</h1>
+        <div class="sidenav-info-container">
+            <div class="header-user">
+                <button class="button" [matMenuTriggerFor]="profileMenu">
+                    <h4>{{user.cn}}</h4>
+                    <i class="material-icons">expand_more</i>
+                </button>
+                <div class="button">
+                    <h4>Oficina</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- USER DESPLEGABLE -->
+<mat-menu #profileMenu="matMenu" [overlapTrigger]="false" class="user-info">
+    <div class="user-title">
+        <p>Datos del usuario</p>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>UID:</b> {{user.uid}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>EMAIL:</b> {{user.email}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>IP:</b> {{user.ip}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>SYSTEM:</b> {{user.system}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>ROL:</b>{{user.roles[0].rol_description}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>ANME ID:</b>{{user.dependencia_cod}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>ANME DESC:</b> {{user.dependencia_desc}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>META4 DESC:</b> {{user.office_desc}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>META4 ID:</b> {{user.office_id}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>OU: </b>{{user.ou}}
+        </div>
+    </div>
+    <div class="user-item">
+        <div class="user-text">
+            <b>SECTOR SIDU:</b> Iniciación
+        </div>
+    </div>
+</mat-menu>

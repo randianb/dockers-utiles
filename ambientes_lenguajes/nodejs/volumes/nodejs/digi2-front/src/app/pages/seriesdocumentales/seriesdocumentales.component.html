@@ -1,0 +1,6 @@
+<div *ngIf="initialized" class="main-container" #scrollContainer>
+    <app-header></app-header>
+    <app-menu></app-menu>
+
+    <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+</div>

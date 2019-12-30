@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+  
+  jboss-eap-7.1:
+    env_file: .env
+    build:
+      context: ./
+      dockerfile: ./dockerfiles/jboss.dockerfile
+
+    volumes:
+      - ./volumes/jboss/dependencias/:/home/jboss/jboss-eap-7.1/dependencias/
+      - ./volumes/jboss/deployments/:/home/jboss/jboss-eap-7.1/standalone/deployments/
+      - ./volumes/jboss/log/:/home/jboss/jboss-eap-7.1/standalone/log/
+
+    ports:
+      - "8080:8080"
+      - "${JBOSS_PUERTO_CONSOLE}:9990"
+      - "${JBOSS_PUERTO_DEBUG}:7080"

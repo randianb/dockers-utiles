@@ -1,0 +1,37 @@
+<div class="action-bar">
+    <button class="action-bar-button" routerLink="/seriesdocumentales/home" [class.menu-active]="this.activeMenu === 'home'">
+        Series
+    </button>
+    <button *ngIf="securityEnable" routerLink="/seriesdocumentales/security"
+        class="action-bar-button" [class.menu-active]="this.activeMenu === 'security'">
+        Gestion de permisos
+    </button>
+    <button *ngIf="storageEnable" routerLink="/seriesdocumentales/storage"
+        class="action-bar-button" [class.menu-active]="this.activeMenu === 'storage'">
+        Gestion de almacenamiento
+    </button>
+    <button *ngIf="fileManagerEnable" routerLink="/seriesdocumentales/filemanager"
+        class="action-bar-button" [class.menu-active]="this.activeMenu === 'filemanager'">
+        Administración de archivos
+    </button>
+    <button routerLink="/seriesdocumentales/applications"
+        class="action-bar-button" [class.menu-active]="this.activeMenu === 'applications'">
+        Aplicaciones
+    </button>
+    <button routerLink="/seriesdocumentales/states"
+        class="action-bar-button" [class.menu-active]="this.activeMenu === 'states'">
+        Estados
+    </button>
+    <!-- <button routerLink="/seriesdocumentales/documenttypes"
+        class="action-bar-button" [class.menu-active]="this.activeMenu === 'documenttypes'">
+        Tipos de Documentos
+    </button> -->
+    <button routerLink="/seriesdocumentales/filetypes"
+        class="action-bar-button" [class.menu-active]="this.activeMenu === 'filetypes'">
+        Tipos de Archivos
+    </button>
+    <button routerLink="/seriesdocumentales/reports"
+        class="action-bar-button" [class.menu-active]="this.activeMenu === 'reports'">
+        Reportes
+    </button>
+</div>

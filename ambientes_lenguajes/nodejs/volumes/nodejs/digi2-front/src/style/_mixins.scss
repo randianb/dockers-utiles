@@ -1,0 +1,116 @@
+@mixin button-outline($color){
+  color: $color;
+  border: 0.15rem solid $color;
+  font-size: 0.8rem;
+  padding: 0.7rem 2rem;
+  background-color: white;
+  font-weight: 700;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  font-family: "Roboto",sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  .material-icons{
+    font-weight: bold;
+    font-size: 0.9rem;
+    float: left;
+    margin: 0 0.5rem;
+  }
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+  &:hover{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+  }
+}
+
+@mixin button-noline($color){
+  color: $color;
+  font-size: 0.8rem;
+  padding: 0.7rem 2rem;
+  background-color: white;
+  font-weight: 700;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  font-family: "Roboto",sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  float: left;
+  .material-icons{
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    float: right;
+  }
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+@mixin button-dashed($color){
+  color: $color;
+  border: 0.15rem dashed $color;
+  font-size: 0.8rem;
+  padding: 0.7rem 0.5rem;
+  background-color: white;
+  font-weight: 700;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  font-family: "Roboto",sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  .material-icons{
+    font-weight: bold;
+    font-size: 0.9rem;
+    float: left;
+    margin: 0rem 0.2rem;
+  }
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+  &:hover{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+  }
+}
+
+@mixin button-primary($color){
+  color: white;
+  border: 0.15rem solid $color;
+  background-color: $color;
+  font-size: 0.8rem;
+  padding: 0.7rem 3rem;
+  font-weight: 700;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  font-family: "Roboto",sans-serif;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 1px;
+  .material-icons{
+    font-weight: bold;
+    font-size: 0.9rem;
+    float: left;
+    margin: 0 0.5rem;
+  }
+  &:hover{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+  }
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+

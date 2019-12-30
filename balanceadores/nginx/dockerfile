@@ -1,0 +1,28 @@
+FROM nginx
+
+# --------------------------------------
+# AMBIENTE PREDEFINIDO
+# --------------------------------------
+
+ENV NGINX_HOST=app.com
+ENV NGINX_PORT=80
+ENV NGINX_NOMBRE_UPSTREAM=nginx_upstream
+ENV NGINX_NOMBRE_SERVER=nginx_server
+
+ENV NGINX_NODO1_HOST=python1
+ENV NGINX_NODO1_PORT=4000
+ENV NGINX_NODO2_HOST=python2
+ENV NGINX_NODO2_PORT=5000
+
+# --------------------------------------
+# EJECUCION
+# --------------------------------------
+
+WORKDIR /etc/nginx/
+
+COPY ./src ./src
+RUN chmod 777 . -R
+
+EXPOSE ${NGINX_PORT}
+
+CMD ./src/scripts/iniciar_con_variables_ambiente.sh

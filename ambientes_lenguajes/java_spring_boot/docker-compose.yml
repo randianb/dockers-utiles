@@ -1,0 +1,26 @@
+version: "3.3"
+
+services:
+    springboot:
+        env_file: .env
+        network_mode: "host"
+        restart: always
+
+        image: "maven:3.6.2-jdk-8"
+
+        volumes:
+            - ./volumes:/var/volumes
+            - ./volumes/m2:/root/.m2
+
+        ports:
+            - "${SPRINGBOOT_PUERTO}:${SPRINGBOOT_PUERTO}"
+            - "${SPRINGBOOT_PUERTO_DEBUG}:${SPRINGBOOT_PUERTO_DEBUG}"
+
+        working_dir: /var/volumes/
+        command: "mvn clean install spring-boot:run \
+            -f ${SPRINGBOOT_NOMBRE_PROYECTO} \
+            -Drun.arguments=\
+            --server.port=${SPRINGBOOT_PUERTO},\
+            --logging.file=./logs/${SPRINGBOOT_NOMBRE_LOG} \
+            --debug \
+            -Drun.jvmArguments=\"-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=${SPRINGBOOT_PUERTO_DEBUG}\""

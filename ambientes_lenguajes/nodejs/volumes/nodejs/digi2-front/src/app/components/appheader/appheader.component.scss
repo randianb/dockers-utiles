@@ -1,0 +1,131 @@
+@import "~style/main";
+
+.sidenav-toolbar {
+    width: 100%;
+    border-bottom: 0.1rem solid #ccc;
+    box-shadow: none;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    transition: left 0.5s;
+    height: 4rem;
+    left: 0;
+    .sidenav-logo-container {
+        box-sizing: border-box;
+        float: left;
+        .sidenav-logo {
+            margin: 1rem 0 1rem 2rem;
+            width: 8rem;
+            border-right: 0.1rem solid $primary;
+            padding-right: 1rem;
+            cursor: pointer;
+        }
+    }
+    .sidenav-title {
+        font-weight: 100;
+        font-size: 1.5em;
+        color: $primary;
+        float: left;
+        margin: 1rem 0 0 1rem;
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+
+.sidenav-info-container {
+    position: relative;
+    float: right;
+    .header-user {
+        position: relative;
+        float: left;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        .button {
+            background: transparent;
+            border: none;
+            color: $primary;
+            position: relative;
+            float: right;
+            margin-left: 1rem;
+            h4 {
+                color: $primary;
+                font-weight: 700;
+                font-size: 0.8rem;
+                padding: 0.35rem 0.5rem 0 0;
+                text-transform: uppercase;
+                margin: 0;
+                float: left;
+                font-family: "Roboto";
+                position: relative;
+            }
+            .material-icons {
+                margin-top: 2px;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:959px) {
+    .sidenav-logo-container {
+        max-width: 75%;
+    }
+    .sidenav-scrollbar-container {
+        left: -20rem;
+        max-width: 75%;
+    }
+    .sidenav-toolbar {
+        width: calc(100% + 20rem);
+        left: -20rem;
+    }
+    .sidenav-title {
+        margin: 1.3rem 0 0 1rem;
+    }
+    .menu-icon {
+        display: block;
+        position: relative;
+        float: left;
+        color: $primary;
+        margin: 1.4rem 0 0 1rem;
+    }
+    .user {
+        margin: 1rem;
+        p {
+            display: none;
+        }
+    }
+    .sidenav-container {
+        &.collapsed {
+            .sidenav-scrollbar-container {
+                left: 0rem;
+                transition: left 0.5s;
+                -webkit-box-shadow: 10px 0px 18px -6px rgba(0, 0, 0, 0.34);
+                -moz-box-shadow: 10px 0px 18px -6px rgba(0, 0, 0, 0.34);
+                box-shadow: 10px 0px 18px -6px rgba(0, 0, 0, 0.34);
+            }
+            .sidenav-toolbar {
+                width: 100%;
+                left: 0;
+                transition: left 0.5s;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 599px) {
+    &.collapsed {
+        .user {
+            display: none;
+        }
+        .sidenav-title {
+            display: none;
+        }
+    }
+}
