@@ -1,7 +1,6 @@
 # SQL SERVER
 imagen de sql server, el docker compose esta configurado para levantar un sql server express 2017
 
-![alt text](img/docker.png)
 ![alt text](img/mssql.png)
 
 ## ACCESOS

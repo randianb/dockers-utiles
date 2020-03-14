@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+
+  mysql:
+
+    image: mysql:8.0.19
+    restart: always
+    
+    env_file: 
+      - ./docker-env/mysql.env
+
+    volumes:
+      - ./volumes/mysql/data:/var/lib/mysql
+      - ./volumes/mysql/sql/:/var/sql/
+    
+    ports:
+      - "3306:3306"

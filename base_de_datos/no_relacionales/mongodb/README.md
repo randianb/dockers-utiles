@@ -1,7 +1,6 @@
 # Mongo DB
-imagen de mongoDB
+> imagen de mongoDB
 
-![alt text](img/docker.png)
 ![alt text](img/MongoDB.png)
 
 ## ACCESOS
@@ -12,4 +11,4 @@ imagen de mongoDB
 
 ## VOLUMES
 
-* **mongo**: con los datos guardados de la base de datos
+* **mongodb**: con los datos guardados de la base de datos

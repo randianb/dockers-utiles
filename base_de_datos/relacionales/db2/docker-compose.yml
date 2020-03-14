@@ -1,18 +1,17 @@
-version: "3.3"
+version: "3.7"
 
 services:
 
   db2:
-    env_file: .env
-    # restart: always
+    image: ibmcom/db2:11.5.0.0
+    restart: always
     privileged: true
     
-    image: ibmcom/db2
-
+    env_file: 
+      - ./docker-env/db2.env
+    
     volumes:
       - ./volumes/db2:/database
     
     ports:
-      - "${DB2_SERVER_PUERTO_EXPUESTO}:50000"
-
-    # command: db2start
+      - "50000:50000"

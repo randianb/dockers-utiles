@@ -1,14 +1,16 @@
-version: "3.3"
+version: "3.7"
 
 services:
   
   mongodb:
-    image: mongo
+    image: mongo:4.2.3
     restart: always
-    env_file: .env
+    
+    env_file: 
+      - ./docker-env/mongodb.env
 
     volumes:
-      - ./volumes/mongo:/data/db
+      - ./volumes/mongodb:/data/db
 
     ports:
-      - "${MONGO_PUERTO_EXTERNO}:${MONGO_PUERTO_INTERNO}"
+      - "27017:27017"

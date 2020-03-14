@@ -1,0 +1,1 @@
+docker run -it -v "/tmp:/tmp" -v "$(pwd)/volumes/logs:/opt/druid/var/sv" -v "$(pwd)/volumes/conf:/opt/druid/conf" -p 8888:8888 -p 8090:8888 -p 8082:8888 fokkodriesprong/docker-druid:latest

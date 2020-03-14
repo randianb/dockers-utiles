@@ -1,18 +1,17 @@
-version: "3.3"
+version: "3.7"
 
 services:
+
   postgres:
     image: postgres
     restart: always
     
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
+    env_file: 
+      - ./docker-env/postgres.env
     
     volumes:
-      - ./volumes/postgres-data:/var/lib/postgresql/data
-      - ./volumes/sql/:/volumes/sql/
+      - ./volumes/postgres/postgres-data:/var/lib/postgresql/data
+      - ./volumes/postgres/sql/:/volumes/sql/
       
     ports:
       - "5432:5432"
