@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  druid-service:
+    image: fokkodriesprong/docker-druid:latest
+    ports:
+      - "8888:8888"
+      - "8090:8888"
+      - "8082:8888"
+    volumes:
+    - /tmp:/tmp
+    - ./volumes/conf:/opt/druid/conf
+    - ./volumes/logs:/opt/druid/var/sv
+
+
+    

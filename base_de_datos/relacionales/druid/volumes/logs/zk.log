@@ -1,0 +1,74 @@
+2019-12-12 18:18:00,426 INFO [main] org.apache.zookeeper.server.quorum.QuorumPeerConfig - Reading configuration from: /opt/druid/conf/zk/zoo.cfg
+2019-12-12 18:18:00,445 INFO [main] org.apache.zookeeper.server.DatadirCleanupManager - autopurge.snapRetainCount set to 5
+2019-12-12 18:18:00,445 INFO [main] org.apache.zookeeper.server.DatadirCleanupManager - autopurge.purgeInterval set to 1
+2019-12-12 18:18:00,452 WARN [main] org.apache.zookeeper.server.quorum.QuorumPeerMain - Either no config or no quorum defined in config, running  in standalone mode
+2019-12-12 18:18:00,452 INFO [PurgeTask] org.apache.zookeeper.server.DatadirCleanupManager - Purge task started.
+2019-12-12 18:18:00,483 INFO [PurgeTask] org.apache.zookeeper.server.DatadirCleanupManager - Purge task completed.
+2019-12-12 18:18:00,708 INFO [main] org.apache.zookeeper.server.quorum.QuorumPeerConfig - Reading configuration from: /opt/druid/conf/zk/zoo.cfg
+2019-12-12 18:18:00,713 INFO [main] org.apache.zookeeper.server.ZooKeeperServerMain - Starting server
+2019-12-12 18:18:00,776 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:zookeeper.version=3.4.14-4c25d480e66aadd371de8bd2fd8da255ac140bcf, built on 03/06/2019 16:18 GMT
+2019-12-12 18:18:00,787 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:host.name=986a1bd7597e
+2019-12-12 18:18:00,787 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.version=1.8.0_222
+2019-12-12 18:18:00,787 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.vendor=Oracle Corporation
+2019-12-12 18:18:00,787 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.home=/usr/local/openjdk-8/jre
+2019-12-12 18:18:00,787 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.class.path=/opt/druid/bin/../zk/lib/log4j-1.2.17.jar:/opt/druid/bin/../zk/lib/slf4j-api-1.7.25.jar:/opt/druid/bin/../zk/lib/audience-annotations-0.5.0.jar:/opt/druid/bin/../zk/lib/netty-3.10.6.Final.jar:/opt/druid/bin/../zk/lib/jline-0.9.94.jar:/opt/druid/bin/../zk/lib/slf4j-log4j12-1.7.25.jar:/opt/druid/bin/../zk/zookeeper-3.4.14.jar:/opt/druid/conf/zk
+2019-12-12 18:18:00,787 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2019-12-12 18:18:00,787 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.io.tmpdir=/tmp
+2019-12-12 18:18:00,788 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.compiler=<NA>
+2019-12-12 18:18:00,788 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.name=Linux
+2019-12-12 18:18:00,788 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.arch=amd64
+2019-12-12 18:18:00,788 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.version=5.0.0-37-generic
+2019-12-12 18:18:00,788 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.name=root
+2019-12-12 18:18:00,788 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.home=/root
+2019-12-12 18:18:00,788 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.dir=/opt/druid
+2019-12-12 18:18:00,792 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - tickTime set to 2000
+2019-12-12 18:18:00,793 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - minSessionTimeout set to -1
+2019-12-12 18:18:00,793 INFO [main] org.apache.zookeeper.server.ZooKeeperServer - maxSessionTimeout set to -1
+2019-12-12 18:18:00,814 INFO [main] org.apache.zookeeper.server.ServerCnxnFactory - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2019-12-12 18:18:00,822 INFO [main] org.apache.zookeeper.server.NIOServerCnxnFactory - binding to port 0.0.0.0/0.0.0.0:2181
+2019-12-12 18:18:10,992 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:44854
+2019-12-12 18:18:11,127 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:44854
+2019-12-12 18:18:11,128 INFO [SyncThread:0] org.apache.zookeeper.server.persistence.FileTxnLog - Creating new log file: log.4d
+2019-12-12 18:18:11,142 INFO [SyncThread:0] org.apache.zookeeper.server.ZooKeeperServer - Established session 0x100013379310000 with negotiated timeout 30000 for client /127.0.0.1:44854
+2019-12-12 18:18:11,326 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310000 type:create cxid:0xa zxid:0x4e txntype:-1 reqpath:n/a Error Path:/druid/indexer/announcements/localhost:8091 Error:KeeperErrorCode = NodeExists for /druid/indexer/announcements/localhost:8091
+2019-12-12 18:18:11,793 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:44856
+2019-12-12 18:18:11,803 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:44856
+2019-12-12 18:18:11,808 INFO [SyncThread:0] org.apache.zookeeper.server.ZooKeeperServer - Established session 0x100013379310001 with negotiated timeout 30000 for client /127.0.0.1:44856
+2019-12-12 18:18:12,142 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:44858
+2019-12-12 18:18:12,156 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:44858
+2019-12-12 18:18:12,161 INFO [SyncThread:0] org.apache.zookeeper.server.ZooKeeperServer - Established session 0x100013379310002 with negotiated timeout 30000 for client /127.0.0.1:44858
+2019-12-12 18:18:12,306 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:44902
+2019-12-12 18:18:12,330 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:44902
+2019-12-12 18:18:12,333 INFO [SyncThread:0] org.apache.zookeeper.server.ZooKeeperServer - Established session 0x100013379310003 with negotiated timeout 30000 for client /127.0.0.1:44902
+2019-12-12 18:18:13,061 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310000 type:create cxid:0x22 zxid:0x52 txntype:-1 reqpath:n/a Error Path:/druid/internal-discovery/MIDDLE_MANAGER/localhost:8091 Error:KeeperErrorCode = NodeExists for /druid/internal-discovery/MIDDLE_MANAGER/localhost:8091
+2019-12-12 18:18:13,472 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:44916
+2019-12-12 18:18:13,485 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:44916
+2019-12-12 18:18:13,488 INFO [SyncThread:0] org.apache.zookeeper.server.ZooKeeperServer - Established session 0x100013379310004 with negotiated timeout 30000 for client /127.0.0.1:44916
+2019-12-12 18:18:14,369 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310003 type:create cxid:0x29 zxid:0x55 txntype:-1 reqpath:n/a Error Path:/druid/announcements/localhost:8083 Error:KeeperErrorCode = NodeExists for /druid/announcements/localhost:8083
+2019-12-12 18:18:14,379 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310003 type:create cxid:0x2e zxid:0x56 txntype:-1 reqpath:n/a Error Path:/druid/listeners/lookups/__default/http:localhost:8083 Error:KeeperErrorCode = NodeExists for /druid/listeners/lookups/__default/http:localhost:8083
+2019-12-12 18:18:14,400 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310003 type:create cxid:0x36 zxid:0x57 txntype:-1 reqpath:n/a Error Path:/druid/internal-discovery/HISTORICAL/localhost:8083 Error:KeeperErrorCode = NodeExists for /druid/internal-discovery/HISTORICAL/localhost:8083
+2019-12-12 18:18:14,610 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310001 type:create cxid:0x1d zxid:0x59 txntype:-1 reqpath:n/a Error Path:/druid/internal-discovery/ROUTER/localhost:8888 Error:KeeperErrorCode = NodeExists for /druid/internal-discovery/ROUTER/localhost:8888
+2019-12-12 18:18:15,455 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310004 type:create cxid:0x39 zxid:0x5c txntype:-1 reqpath:n/a Error Path:/druid/listeners/lookups/__default/http:localhost:8082 Error:KeeperErrorCode = NodeExists for /druid/listeners/lookups/__default/http:localhost:8082
+2019-12-12 18:18:15,496 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310004 type:create cxid:0x3e zxid:0x5d txntype:-1 reqpath:n/a Error Path:/druid/internal-discovery/BROKER/localhost:8082 Error:KeeperErrorCode = NodeExists for /druid/internal-discovery/BROKER/localhost:8082
+2019-12-12 18:18:16,136 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310002 type:create cxid:0x2a zxid:0x5f txntype:-1 reqpath:n/a Error Path:/druid/internal-discovery/COORDINATOR/localhost:8081 Error:KeeperErrorCode = NodeExists for /druid/internal-discovery/COORDINATOR/localhost:8081
+2019-12-12 18:18:16,146 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x100013379310002 type:create cxid:0x2e zxid:0x60 txntype:-1 reqpath:n/a Error Path:/druid/internal-discovery/OVERLORD/localhost:8081 Error:KeeperErrorCode = NodeExists for /druid/internal-discovery/OVERLORD/localhost:8081
+2019-12-12 18:18:32,367 INFO [SessionTracker] org.apache.zookeeper.server.ZooKeeperServer - Expiring session 0x10000051f510001, timeout of 30000ms exceeded
+2019-12-12 18:18:32,367 INFO [SessionTracker] org.apache.zookeeper.server.ZooKeeperServer - Expiring session 0x10000051f510004, timeout of 30000ms exceeded
+2019-12-12 18:18:32,368 INFO [SessionTracker] org.apache.zookeeper.server.ZooKeeperServer - Expiring session 0x10000051f510003, timeout of 30000ms exceeded
+2019-12-12 18:18:32,368 INFO [SessionTracker] org.apache.zookeeper.server.ZooKeeperServer - Expiring session 0x10000051f510002, timeout of 30000ms exceeded
+2019-12-12 18:18:32,368 INFO [SessionTracker] org.apache.zookeeper.server.ZooKeeperServer - Expiring session 0x10000051f510000, timeout of 30000ms exceeded
+2019-12-12 18:18:32,368 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x10000051f510001
+2019-12-12 18:18:32,369 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x10000051f510004
+2019-12-12 18:18:32,369 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x10000051f510003
+2019-12-12 18:18:32,369 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x10000051f510002
+2019-12-12 18:18:32,370 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x10000051f510000
+2019-12-12 18:18:55,293 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x100013379310000
+2019-12-12 18:18:55,298 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:44854 which had sessionid 0x100013379310000
+2019-12-12 18:18:55,448 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x100013379310003
+2019-12-12 18:18:55,450 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:44902 which had sessionid 0x100013379310003
+2019-12-12 18:18:55,457 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x100013379310001
+2019-12-12 18:18:55,460 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:44856 which had sessionid 0x100013379310001
+2019-12-12 18:18:55,481 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x100013379310004
+2019-12-12 18:18:55,483 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:44916 which had sessionid 0x100013379310004
+2019-12-12 18:18:55,561 INFO [ProcessThread(sid:0 cport:2181):] org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x100013379310002
+2019-12-12 18:18:55,563 INFO [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:44858 which had sessionid 0x100013379310002

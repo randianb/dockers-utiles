@@ -2,15 +2,15 @@ version: "3.3"
 
 services:
   
-  sql-server-express:
-    env_file: .env
-    # network_mode: host
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
     restart: always
 
-    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    env_file:
+      - ./docker-env/mssql.env
 
     volumes:
       - ./volumes/mssql:/var/opt/mssql
 
     ports:
-      - "${SQL_SERVER_PUERTO_EXPUESTO}:${SQL_SERVER_PUERTO_INTERNO}"
+      - "1433:1433"
