@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+
+    projectsend:
+        image: linuxserver/projectsend
+        restart: unless-stopped
+
+        env_file: 
+            - ./docker-env/projectsend.env
+
+        volumes:
+            - ./volumes/projectsend:/config
+            - ./volumes/projectsend:/data
+
+        ports:
+            - 7000:80
+
+
+    mysql:
+        image: mysql:8.0.19
+        restart: always
+        
+        env_file: 
+            - ./docker-env/mysql.env
+
+        volumes:
+            - ./volumes/mysql/data:/var/lib/mysql
+            - ./volumes/mysql/sql/:/var/sql/
+        
+        ports:
+            - "3306:3306"
+
+        command: --default-authentication-plugin=mysql_native_password
