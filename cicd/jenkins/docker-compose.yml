@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+
+    jenkins:
+        image: jenkins/jenkins:lts
+        restart: always
+        user: root
+        env_file: 
+            - ./docker-env/jenkins.env
+
+        volumes:
+            - ./volumes/jenkins:/var/jenkins_home:rw
+
+        ports:
+            - "10000:8080"
+            - "50000:50000"
+
+
+
+
+## docker run --name myjenkins -p 8080:8080 -p 50000:50000 --env JAVA_OPTS=-Dhudson.footerURL=http://mycompany.com jenkins/jenkins:lts
