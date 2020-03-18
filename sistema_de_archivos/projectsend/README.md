@@ -1,6 +1,6 @@
 # REDIS
 
-Imagen de redis, contiene scripts para levantar el compose del server y del cliente
+> Imagen de redis, contiene scripts para levantar el compose del server y del cliente
 
 ![alt text](img/redis.png)
 
@@ -29,4 +29,5 @@ Se tienen que correr desde la raiz del proyecto, ejemplo:
 
 ## PAGINA
 
-[Imagen docker hub](https://hub.docker.com/_/red
+[Imagen docker hub](https://hub.docker.com/_/red)
+[Ejemplos de configs](https://github.com/projectsend/projectsend/tree/master/includes)

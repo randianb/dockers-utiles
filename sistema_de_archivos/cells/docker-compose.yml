@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+
+    cells:
+        image: pydio/cells:latest
+        restart: always
+        
+        env_file: 
+            - ./docker-env/cells.env
+            
+        volumes: 
+            - ./volumes/cells:/var/cells
+
+        ports: 
+            - 8080:8080
+
+        depends_on:
+            - mysql
+
+
+    mysql:
+        image: mysql:8.0.19
+        restart: always
+        
+        env_file: 
+            - ./docker-env/mysql.env
+
+        volumes:
+            - ./volumes/mysql/data:/var/lib/mysql
+            - ./volumes/mysql/sql/:/var/sql/
+        
+        ports:
+            - 3306:3306
+
+        command: --default-authentication-plugin=mysql_native_password
