@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+
+    minio:
+        image: minio/minio
+        restart: always
+
+        env_file: 
+            - ./docker-env/minio.env
+
+        volumes:
+            - ./volumes/minio/data:/data
+
+        ports:
+            - 9000:9000
+
+        command: server /data
