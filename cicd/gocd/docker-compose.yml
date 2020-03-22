@@ -11,8 +11,8 @@ services:
             - ./docker-env/gocd.env
 
         volumes:
-            - ./volumes/gocd/home:/home/go:rw
-            - ./volumes/gocd/data:/godata:rw
+            - ~/volumes/gocd/home:/home/go:rw
+            - ~/volumes/gocd/data:/godata:rw
 
         ports:
             - 8153:8153

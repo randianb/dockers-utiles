@@ -10,7 +10,7 @@ services:
             - ./docker-env/minio.env
 
         volumes:
-            - ./volumes/minio/data:/data
+            - ~/volumes/minio/data:/data
 
         ports:
             - 9000:9000

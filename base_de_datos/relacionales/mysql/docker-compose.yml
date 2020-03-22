@@ -11,8 +11,8 @@ services:
       - ./docker-env/mysql.env
 
     volumes:
-      - ./volumes/mysql/data:/var/lib/mysql
-      - ./volumes/mysql/sql/:/var/sql/
+      - ~/volumes/mysql/data:/var/lib/mysql
+      - ~/volumes/mysql/sql/:/var/sql/
     
     ports:
       - "3306:3306"

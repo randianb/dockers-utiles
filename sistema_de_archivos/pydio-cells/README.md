@@ -4,7 +4,7 @@
 
 ![alt text](img/cells.png)
 
-## PUERTOS
+## Puertos
 
 * **cells**: 8080
 * **mysql**: 3306
@@ -14,12 +14,12 @@
 * **mysql user**: root
 * **mysql pass**: admin
 
-## VOLUMES
+## Volumes
 
 * **cells**: datos de cells
 * **mysql**: datos de mysql
 
-## PAGINA
+## Paginas
 
 [Imagen docker hub](https://hub.docker.com/r/pydio/cells/)
 

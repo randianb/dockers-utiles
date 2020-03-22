@@ -12,7 +12,7 @@ services:
     env_file: .env
 
     # volumes:
-    #   - ./volumes/nodejs/${NODEJS_PROYECTO}:/home/node/app
+    #   - ~/volumes/nodejs/${NODEJS_PROYECTO}:/home/node/app
 
     ports:
       - ${NODEJS_PUERTO}:${NODEJS_PUERTO}

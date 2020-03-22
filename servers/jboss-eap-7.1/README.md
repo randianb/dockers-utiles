@@ -5,7 +5,7 @@ Imagen con un jboss eap 7.1 alphine
 ![alt text](img/jboss.jpg)
 
 
-## PUERTOS
+## Puertos
 
 * **consola**: 9990
 * **debug**: 7080
@@ -18,7 +18,7 @@ Imagen con un jboss eap 7.1 alphine
 * **user**: leafnoise
 * **pass**: leafnoise
 
-## VOLUMES
+## Volumes
 
 * **dependencias**: carpeta donde irian todos los archivos que necesites en el docker
 * **log**: logs del server
@@ -38,6 +38,6 @@ Se tienen que correr desde la raiz del proyecto, ejemplo:
 * **jboss-cli**: ejecuta el script de *bin/jboss-cli.sh*, una vez dentro connectarse con el comando *connect*  
 
 
-## PAGINA
+## Paginas
 
 [daggerok/jboss-eap-7.1](https://hub.docker.com/r/daggerok/jboss-eap-7.1)

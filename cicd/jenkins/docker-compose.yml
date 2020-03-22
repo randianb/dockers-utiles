@@ -10,7 +10,7 @@ services:
             - ./docker-env/jenkins.env
 
         volumes:
-            - ./volumes/jenkins:/var/jenkins_home:rw
+            - ~/volumes/jenkins:/var/jenkins_home:rw
 
         ports:
             - "10000:8080"

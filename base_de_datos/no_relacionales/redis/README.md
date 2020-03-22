@@ -6,7 +6,7 @@ Imagen de redis, contiene scripts para levantar el compose del server y del clie
 ![alt text](img/redis.png)
 
 
-## PUERTOS
+## Puertos
 
 * **DB**: 6379
 
@@ -16,7 +16,7 @@ Imagen de redis, contiene scripts para levantar el compose del server y del clie
 ***nada por aca***
 
 
-## VOLUMES
+## Volumes
 
 * **data**: con los datos guardados por redis
 * **config**: contiene la configiguracion para redis-server
@@ -34,6 +34,6 @@ Se tienen que correr desde la raiz del proyecto, ejemplo:
 * **redis-cli**: ejecuta el comando de redis-cli con docker compose  
 
 
-## PAGINA
+## Paginas
 
 [Imagen docker hub](https://hub.docker.com/_/redis)

@@ -10,7 +10,7 @@ services:
       - ./docker-env/mongodb.env
 
     volumes:
-      - ./volumes/mongodb:/data/db
+      - ~/volumes/mongodb:/data/db
 
     ports:
       - "27017:27017"

@@ -10,7 +10,7 @@ Ejemplo de uso de nginx
 * En el archivo ***.env*** se encuentran las variables de entorno para docker
 
 
-## VOLUMES
+## Volumes
 
 * **config**: configuracion del proxy
 * **logs**: logs

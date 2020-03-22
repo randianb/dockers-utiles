@@ -13,11 +13,11 @@
 * **pass root**: leafnoise
 
 
-## VOLUMES
+## Volumes
 
 * **data**: con los datos guardados por la base de datos
 * **sql**: sirve para agregar scripts sql
 
-## PAGINA
+## Paginas
 
 https://hub.docker.com/_/mysql

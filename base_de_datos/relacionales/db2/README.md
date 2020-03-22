@@ -9,7 +9,7 @@
 * **puerto**: 50000
 * **base**: testdb
 
-## VOLUMES
+## Volumes
 
 * **db2**: con los datos guardados de la base de datos
 

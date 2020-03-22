@@ -10,9 +10,9 @@ services:
             - ./docker-env/syncthing.env
             
         volumes: 
-            - ./volumes/syncthing/appdata/config:/config
-            - ./volumes/syncthing/data1:/data1
-            - ./volumes/syncthing/data2:/data2
+            - ~/volumes/syncthing/appdata/config:/config
+            - ~/volumes/syncthing/data1:/data1
+            - ~/volumes/syncthing/data2:/data2
 
         ports: 
             - 8384:8384

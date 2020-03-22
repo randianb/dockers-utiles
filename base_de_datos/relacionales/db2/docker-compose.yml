@@ -11,7 +11,7 @@ services:
       - ./docker-env/db2.env
     
     volumes:
-      - ./volumes/db2:/database
+      - ~/volumes/db2:/database
     
     ports:
       - "50000:50000"

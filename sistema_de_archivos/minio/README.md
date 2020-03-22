@@ -4,7 +4,7 @@
 
 ![alt text](img/minio.png)
 
-## PUERTOS
+## Puertos
 
 * **server**: 9000
 
@@ -13,16 +13,16 @@
 **USER**: adminminion
 **PASS**: adminminion
 
-## VOLUMES
+## Volumes
 
 * **data**: con los datos de la aplicacion
 * **storage**: archivos guardados
 
-## PRUEBA
+## Prueba
 
 Hay que subir un archivo e ir a la url:
 `http://localhost:9000/{storage}/{archivo con extension}`
 
-## PAGINA
+## Paginas
 
 [Imagen docker hub](https://hub.docker.com/r/minio/minio/)

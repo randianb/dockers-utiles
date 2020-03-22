@@ -10,7 +10,7 @@ services:
             - ./docker-env/redis.env
 
         volumes:
-            - ./volumes/redis/data:/data
+            - ~/volumes/redis/data:/data
 
         ports:
             - "6379:6379"

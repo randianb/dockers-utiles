@@ -5,7 +5,7 @@
 Prueba de MQ para proyectos
 
 
-## PRUEBAS REST
+## PruebaS REST
 
 Para probar pegarle a esta URL:
 
@@ -22,7 +22,7 @@ Para probar pegarle a esta URL:
 https://localhost:9443/ibmmq/console/
 
 
-## PUERTOS EXPUESTOS
+## Puertos EXPUESTOS
 
 - 1414
 - 9443

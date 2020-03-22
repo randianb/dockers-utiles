@@ -5,6 +5,6 @@ ARG ATTACK_DURATION = 10s
 ARG ATTACK_TARGETS = target.txt
 ARG ATTACK_BODY = body.json
 
-COPY ./volumes .
+COPY ~/volumes .
 
 CMD vegeta attack -rate=${ATTACK_RATE} -duration=${ATTACK_DURATION} -targets=${ATTACK_TARGETS} -body=${ATTACK_BODY} | report

@@ -18,4 +18,4 @@ services:
       - "9157:9157"      
 
     volumes:
-      - ./volumes/mqm/:/mnt/mqm/
+      - ~/volumes/mqm/:/mnt/mqm/

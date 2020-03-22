@@ -10,7 +10,7 @@ services:
       - ./docker-env/mssql.env
 
     volumes:
-      - ./volumes/mssql:/var/opt/mssql
+      - ~/volumes/mssql:/var/opt/mssql
 
     ports:
       - "1433:1433"

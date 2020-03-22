@@ -5,7 +5,7 @@
 
 ![alt text](img/jenkins.png)
 
-## PUERTOS
+## Puertos
 
 * **Jenkins**: 10000
 
@@ -17,10 +17,10 @@
 
 * En caso de no poder, el archivo esta dentro de `volumes/jenkins/secrets/`, es necesario darle **permisos de acceso** para entrar
 
-## VOLUMES
+## Volumes
 
 * **jenkins**: contiene los datos guardados por jenkins
 
-## PAGINA
+## Paginas
 
 [Imagen docker hub](https://hub.docker.com/r/jenkins/jenkins/)

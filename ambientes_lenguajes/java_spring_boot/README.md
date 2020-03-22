@@ -6,12 +6,12 @@
 Imagen basada en maven con un proyecto en springboot para un despliegue rapido de un microservicio 
 
 
-## PUERTOS
+## Puertos
 	
 *   8080
 
 
-## VOLUMES
+## Volumes
 
 *  **codigo**: donde se encuentra el codigo fuente, el pom debe encontrarse en esta ruta
 *	**logs**: ubiccion del log de springboot, se almacena como un archivo llamado spring-boot.log

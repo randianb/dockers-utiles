@@ -5,11 +5,11 @@ Imagen con nodeJS
 
 ![alt text](img/node2.png)
 
-## PUERTOS
+## Puertos
 	
 *   **nodejs**: 4200
 
-## VOLUMES
+## Volumes
 
 *  **${NODEJS_PROYECTO}**: contiene el codigo del proyecto
 

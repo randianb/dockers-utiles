@@ -9,7 +9,7 @@ imagen de druid
 Por ahora sin seguridad
 
 
-## VOLUMES
+## Volumes
 
 * **tmp**: apuntando los archivos temporales a /tmp
 * **logs**: guardado dentro del docker en "/volumes/logs/" sirve para ver los logs de druid (broker,middleManager,etc)
@@ -40,6 +40,6 @@ Por ahora sin seguridad
 
 * **Logging**: La cantidad de logs que genera druid es increible, para mitigar esto cambiar la linea **\<Root level="info"\>** por **\<Root level="error"\>** en archivo volumes/conf/druid/cluster/_common/log4j2.xml
 
-## PAGINA
+## Paginas
 
 https://hub.docker.com/r/fokkodriesprong/docker-druid/

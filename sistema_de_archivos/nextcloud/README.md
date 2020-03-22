@@ -4,7 +4,7 @@
 
 ![alt text](img/nextcloud.png)
 
-## PUERTOS
+## Puertos
 
 * **nextcloud**: 8080
 * **mysql**: 3306
@@ -14,11 +14,11 @@
 * **mysql user**: root
 * **mysql pass**: admin
 
-## VOLUMES
+## Volumes
 
 * **nextcloud**: datos de nextcloud
 * **mysql**: datos de mysql
 
-## PAGINA
+## Paginas
 
 [Imagen docker hub](https://hub.docker.com/_/nextcloud/)

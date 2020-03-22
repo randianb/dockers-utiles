@@ -4,7 +4,7 @@
 
 ![alt text](img/redis.png)
 
-## PUERTOS
+## Puertos
 
 * **DB**: 6379
 
@@ -12,7 +12,7 @@
 
 ***nada por aca***
 
-## VOLUMES
+## Volumes
 
 * **data**: con los datos guardados por redis
 * **config**: contiene la configiguracion para redis-server
@@ -27,7 +27,7 @@ Se tienen que correr desde la raiz del proyecto, ejemplo:
 
 * **redis-cli**: ejecuta el comando de redis-cli con docker compose  
 
-## PAGINA
+## Paginas
 
 [Imagen docker hub](https://hub.docker.com/_/red)
 [Ejemplos de configs](https://github.com/projectsend/projectsend/tree/master/includes)

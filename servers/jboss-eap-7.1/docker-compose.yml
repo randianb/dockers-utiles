@@ -9,9 +9,9 @@ services:
       dockerfile: ./dockerfiles/jboss.dockerfile
 
     volumes:
-      - ./volumes/jboss/dependencias/:/home/jboss/jboss-eap-7.1/dependencias/
-      - ./volumes/jboss/deployments/:/home/jboss/jboss-eap-7.1/standalone/deployments/
-      - ./volumes/jboss/log/:/home/jboss/jboss-eap-7.1/standalone/log/
+      - ~/volumes/jboss/dependencias/:/home/jboss/jboss-eap-7.1/dependencias/
+      - ~/volumes/jboss/deployments/:/home/jboss/jboss-eap-7.1/standalone/deployments/
+      - ~/volumes/jboss/log/:/home/jboss/jboss-eap-7.1/standalone/log/
 
     ports:
       - "8080:8080"

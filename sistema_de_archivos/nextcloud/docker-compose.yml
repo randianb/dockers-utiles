@@ -10,7 +10,7 @@ services:
             - ./docker-env/nextcloud.env
             
         volumes: 
-            - ./volumes/nextcloud:/var/www/html
+            - ~/volumes/nextcloud:/var/www/html
 
         ports: 
             - 8080:80
@@ -27,8 +27,8 @@ services:
             - ./docker-env/mysql.env
 
         volumes:
-            - ./volumes/mysql/data:/var/lib/mysql
-            - ./volumes/mysql/sql/:/var/sql/
+            - ~/volumes/mysql/data:/var/lib/mysql
+            - ~/volumes/mysql/sql/:/var/sql/
         
         ports:
             - 3306:3306

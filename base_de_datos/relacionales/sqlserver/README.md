@@ -9,6 +9,6 @@ imagen de sql server, el docker compose esta configurado para levantar un sql se
 * **pass**: $$Leafnoise%
 * **puerto**: 1433
 
-## VOLUMES
+## Volumes
 
 * **mssql**: con los datos guardados de la base de datos

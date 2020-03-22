@@ -10,9 +10,9 @@ services:
             - ./docker-env/projectsend.env
 
         volumes:
-            - ./volumes/projectsend/config:/config
-            - ./volumes/projectsend/data:/data
-            - ./volumes/projectsend/php-config/:/var/www/html/projectsend/includes/
+            - ~/volumes/projectsend/config:/config
+            - ~/volumes/projectsend/data:/data
+            - ~/volumes/projectsend/php-config/:/var/www/html/projectsend/includes/
 
         ports:
             - 7000:80
@@ -29,8 +29,8 @@ services:
             - ./docker-env/mysql.env
 
         volumes:
-            - ./volumes/mysql/data:/var/lib/mysql
-            - ./volumes/mysql/sql/:/var/sql/
+            - ~/volumes/mysql/data:/var/lib/mysql
+            - ~/volumes/mysql/sql/:/var/sql/
         
         ports:
             - "3306:3306"

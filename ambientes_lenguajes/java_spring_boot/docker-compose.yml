@@ -9,8 +9,8 @@ services:
         image: "maven:3.6.2-jdk-8"
 
         volumes:
-            - ./volumes:/var/volumes
-            - ./volumes/m2:/root/.m2
+            - ~/volumes:/var/volumes
+            - ~/volumes/m2:/root/.m2
 
         ports:
             - "${SPRINGBOOT_PUERTO}:${SPRINGBOOT_PUERTO}"
