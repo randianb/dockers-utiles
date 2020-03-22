@@ -2,3 +2,6 @@
 /volumes/projectsend/data/*
 
 /volumes/mysql/*
+
+
+.vscode/
