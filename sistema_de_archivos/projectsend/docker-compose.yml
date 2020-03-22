@@ -1,0 +1,42 @@
+version: "3.7"
+
+services:
+
+    projectsend:
+        image: linuxserver/projectsend
+        restart: unless-stopped
+
+        env_file: 
+            - ./docker-env/projectsend.env
+
+        volumes:
+            - ./volumes/projectsend/config:/config
+            - ./volumes/projectsend/data:/data
+            - ./volumes/projectsend/php-config/:/var/www/html/projectsend/includes/
+
+        ports:
+            - 7000:80
+        
+        depends_on:
+            - mysql
+
+
+    mysql:
+        image: mysql:8.0.19
+        restart: always
+        
+        env_file: 
+            - ./docker-env/mysql.env
+
+        volumes:
+            - ./volumes/mysql/data:/var/lib/mysql
+            - ./volumes/mysql/sql/:/var/sql/
+        
+        ports:
+            - "3306:3306"
+
+        command: --default-authentication-plugin=mysql_native_password
+
+
+
+        # docker run -p 80:80 -e DB_NAME=ps -e DB_HOST=mysql -e DB_USER=root -e DB_PASS=123456 --link=mariadb:mysql -d derjudge/projectsend

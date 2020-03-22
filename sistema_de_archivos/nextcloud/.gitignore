@@ -1,0 +1,4 @@
+/volumes/nextcloud/*
+/volumes/mysql/*
+
+.vscode/

@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+
+    syncthing:
+        image: linuxserver/syncthing
+        restart: always
+        
+        env_file: 
+            - ./docker-env/syncthing.env
+            
+        volumes: 
+            - ./volumes/syncthing/appdata/config:/config
+            - ./volumes/syncthing/data1:/data1
+            - ./volumes/syncthing/data2:/data2
+
+        ports: 
+            - 8384:8384
+            - 22000:22000
+            - 21027:21027

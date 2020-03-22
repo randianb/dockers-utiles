@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+
+    nextcloud:
+        image: nextcloud
+        restart: always
+        
+        env_file: 
+            - ./docker-env/nextcloud.env
+            
+        volumes: 
+            - ./volumes/nextcloud:/var/www/html
+
+        ports: 
+            - 8080:80
+
+        depends_on:
+            - mysql
+
+
+    mysql:
+        image: mysql:8.0.19
+        restart: always
+        
+        env_file: 
+            - ./docker-env/mysql.env
+
+        volumes:
+            - ./volumes/mysql/data:/var/lib/mysql
+            - ./volumes/mysql/sql/:/var/sql/
+        
+        ports:
+            - 3306:3306
+
+        command: --default-authentication-plugin=mysql_native_password --transaction-isolation=READ-COMMITTED --binlog-format=ROW

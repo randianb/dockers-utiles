@@ -1,0 +1,7 @@
+/volumes/projectsend/config/*
+/volumes/projectsend/data/*
+
+/volumes/mysql/*
+
+
+.vscode/
