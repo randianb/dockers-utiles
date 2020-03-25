@@ -1,5 +1,0 @@
-investigar sobre como usar los scritps de groovy para crear el usuario sin hacer la parte del token y toda la bola
-
-https://github.com/thbkrkr/jks/blob/master/init.groovy.d/1-create-admin-user.groovy
-
-https://gist.github.com/hayderimran7/50cb1244cc1e856873a4

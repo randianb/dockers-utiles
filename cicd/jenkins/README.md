@@ -9,11 +9,11 @@
 
 * **Jenkins**: 10000
 
-## ACCESOS
+## Accesos
 
-### IMPORTANTE
+### Importante
 
-* Copiar la constraseña que aparece en el log cuando se levanta el server porque es necesaria para crear los usuarios.
+* Copiar la contraseña que aparece en el log cuando se levanta el server porque es necesaria para crear los usuarios.
 
 * En caso de no poder, el archivo esta dentro de `volumes/jenkins/secrets/`, es necesario darle **permisos de acceso** para entrar
 

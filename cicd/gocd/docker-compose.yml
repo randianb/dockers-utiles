@@ -2,23 +2,42 @@ version: "3.7"
 
 services:
 
-    gocd:
+    gocd-server:
         image: gocd/gocd-server:v20.1.0
         restart: always
         user: root
-        
+
         env_file: 
-            - ./docker-env/gocd.env
+            - ./docker-env/gocd-server.env
 
         volumes:
-            - ~/volumes/gocd/home:/home/go:rw
-            - ~/volumes/gocd/data:/godata:rw
+            - ~/volumes/gocd-server/godata/addons:/godata/addons
+            - ~/volumes/gocd-server/godata/artifacts:/godata/artifacts
+            - ~/volumes/gocd-server/godata/config:/godata/config
+            - ~/volumes/gocd-server/godata/db:/godata/db
+            - ~/volumes/gocd-server/godata/logs:/godata/logs
+            - ~/volumes/gocd-server/godata/plugins:/godata/plugins
+            - ~/volumes/gocd-server/home/go:/home/go
 
         ports:
             - 8153:8153
             - 8154:8154
 
 
+    gocd-agent:
+        image: gocd/gocd-agent-ubuntu-18.04:v20.2.0
+        # image: gocd/gocd-agent-alpine-3.8:v20.2.0
+        restart: always
+        user: root
+        
+        env_file: 
+            - ./docker-env/gocd-agent.env
 
-            # docker run -v /path/to/godata:/godata -v /path/to/home-dir:/home/go gocd/gocd-server:v20.1.0
+        volumes:
+            - ~/volumes/gocd-agent/godata/config:/godata/config
+            - ~/volumes/gocd-agent/godata/pipelines:/godata/pipelines
+            - ~/volumes/gocd-agent/godata/logs:/godata/logs
+            - ~/volumes/gocd-agent/home/go:/home/go
 
+        depends_on:
+            - gocd-server
