@@ -25,8 +25,8 @@ services:
 
 
     gocd-agent:
-        image: gocd/gocd-agent-ubuntu-18.04:v20.2.0
-        # image: gocd/gocd-agent-alpine-3.8:v20.2.0
+        # image: gocd/gocd-agent-ubuntu-18.04:v20.2.0
+        image: gocd/gocd-agent-alpine-3.8:v20.2.0
         restart: always
         user: root
         

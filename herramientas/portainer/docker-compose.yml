@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+
+    portainer:
+        image: portainer/portainer
+        restart: always
+
+        env_file: 
+            - ./docker-env/portainer.env
+        
+        volumes: 
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ~/volumes/portainer/data:/data portainer/portainer
+
+        ports:
+            - 9000:9000
+            - 8000:8000
+
+        command: -H unix:///var/run/docker.sock
