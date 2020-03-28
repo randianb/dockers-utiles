@@ -1,26 +1,27 @@
 
-# Jenkins
+# Go cd
 
-> Imagen con Jenkins para realizar pruebas, usa la version **lts**, pero existe un alpine
+> Imagen con Go cd, contiene el server y el agent para realizar las pruebas
 
-![alt text](img/jenkins.png)
+![alt text](img/gocd.png)
 
-## PUERTOS
+## Puertos
 
-* **Jenkins**: 10000
+* **gocd**: 8153
 
-## ACCESOS
+## Volumes
 
-### IMPORTANTE
+### Server
 
-* Copiar la constraseña que aparece en el log cuando se levanta el server porque es necesaria para crear los usuarios.
+* **~/volumes/gocd-server/home/**: carpeta *home* del servidor de Go
+* **~/volumes/gocd-server/godata/**: datos del servidor de Go
 
-* En caso de no poder, el archivo esta dentro de `volumes/jenkins/secrets/`, es necesario darle **permisos de acceso** para entrar
+### Agente
 
-## VOLUMES
+* **~/volumes/gocd-server/home**: carpeta *home* del servidor de Go
+* **~/volumes/gocd-agent/godata/**: datos del agente de Go
 
-* **jenkins**: contiene los datos guardados por jenkins
+## Paginas
 
-## PAGINA
-
-[Imagen docker hub](https://hub.docker.com/r/jenkins/jenkins/)
+[Imagen docker hub](https://hub.docker.com/r/gocd/gocd/)
+[Pagina oficial](https://www.gocd.org/)

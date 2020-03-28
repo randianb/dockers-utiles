@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+
+    crushftp:
+        image: adito/crushftp
+        restart: unless-stopped
+
+        env_file: 
+            - ./docker-env/crushftp.env
+
+        volumes:
+            - ~/volumes/crushftp/data:/var/opt/CrushFTP8_PC/
+            - ~/volumes/crushftp/share:/share
+
+        ports:
+            - 9000:9000
+            - 2222:2222
+            - 8080:8080
+            - 443:443
