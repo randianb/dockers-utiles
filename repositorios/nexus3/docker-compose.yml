@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+
+    nexus3:
+        image: sonatype/nexus3
+        restart: always
+        
+        env_file: 
+            - ./docker-env/nexus3.env
+            
+        volumes: 
+            - ~/volumes/nexus3/data:/nexus-data
+
+        ports: 
+            - 8081:8081
