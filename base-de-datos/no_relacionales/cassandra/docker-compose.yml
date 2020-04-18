@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+
+    cassandra:
+        image: cassandra:3.11.6
+        restart: always
+        
+        env_file: 
+            - ./docker-env/cassandra.env
+
+        volumes:
+            - ~/volumes/cassandra/data:/var/lib/cassandra
+
+        ports:
+            - 7000:7000

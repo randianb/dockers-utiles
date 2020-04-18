@@ -5,9 +5,10 @@
 
 ## ACCESOS
 
-* **user**: leafnoise
-* **pass**: leafnoise
+* **user**: mongo
+* **pass**: mongo
 * **puerto**: 27017
+* **DB**: admin
 
 ## Volumes
 
