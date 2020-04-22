@@ -1,1 +1,1 @@
-docker-compose run cassandra cqlsh some-cassandra
+docker-compose exec cassandra cqlsh
