@@ -7,7 +7,7 @@
 
 ## Puertos
 
-* **DB**: 7000
+* **DB**: 9042
 
 ## Volumes
 
