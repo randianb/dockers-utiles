@@ -13,6 +13,7 @@
 ## Puertos
 
 * **consola web**: 7474
+* **DB**: 7687
 
 ## Volumes
 
