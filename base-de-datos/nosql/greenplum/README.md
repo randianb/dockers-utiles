@@ -16,6 +16,11 @@
 * ejecutar el script `./scripts/gpadmin.sh`
 * una vez dentro del container ejecutar `psql`
 
+## Accesos
+
+* **user**: gpadmin
+* **pass**: pivotal
+
 ## Puertos
 
 * **DB**: 5432
